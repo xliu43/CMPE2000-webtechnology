@@ -1,5 +1,14 @@
 ﻿body {
-  /* Uncomment this to enable scrolling and zooming
-  touch-action: manipulation;
-  */
+ background-color:lightgrey;
+}
+div {
+border:1px solid blue;
+}
+table {
+    margin:auto auto;
+}
+button {
+    min-height:30px;
+    min-width:30px;
+   
 }
