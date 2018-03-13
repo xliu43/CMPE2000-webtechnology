@@ -76,12 +76,15 @@ CCell.prototype.show = function () {
         if (this.mine === true) {
             button.innerHTML = "B";
         }
-        else if (this.count>0) {
+        else if (this.count > 0) {
             button.innerHTML = this.count;
-        } 
+        }
         return 1;
-    } else
+    } else {
+        button.style.setProperty('background-color', 'black');
         return 0;
+      }
+      
 }
 CCell.prototype.bind = function () {
     var cell = this;
@@ -98,6 +101,7 @@ CCell.prototype.bind = function () {
             else {
                 
                 document.getElementsByClassName('game-status')[0].innerHTML = "You picked up wrong mine";
+                gameOverFlag = true;
                 cell.display = true;
                 ShowGrid();
                
@@ -108,6 +112,7 @@ CCell.prototype.bind = function () {
                 cell.display =true;
                 ShowGrid();
                 document.getElementsByClassName('game-status')[0].innerHTML = "you stepped on a mine! Good luck";
+                gameOverFlag = true;
             }
             else {
                 Check(cell.row, cell.col);
@@ -117,9 +122,20 @@ CCell.prototype.bind = function () {
             } 
             
         }
+        if (gameOverFlag) {
+            for (var i = 0; i < cell2DArray.length; i++) {
+                for (var j = 0; j < cell2DArray[i].length; j++) {
+                    cell2DArray[i][j].display = true;
+                }
+            }
+            ShowGrid();
+        }
+
+
             
            
     };
+  
 }
 
 function Check(row, col) {
@@ -146,13 +162,9 @@ function Check(row, col) {
 
 //Main Code 
 
-var max_row = 10;
-var max_col = 10;
-var num_mines = Math.floor(document.body.difficultyControl.value * (max_row * max_col));
-var cell2DArray = Helper.Create2DArray(max_row, max_col, 0);
-var gameFlag = false;
 
 function NewGame() {
+    gameOverFlag = false;
     //populate cellArray with new Cells
     for (var i = 0; i < max_row; i++) {
         for (var j = 0; j < max_col; j++) {
@@ -187,6 +199,7 @@ function NewGame() {
         }
     }
 
+    return cell2DArray;
 
 }
 
@@ -223,11 +236,43 @@ function BindGrid() {
 }
 
 
+var max_row = 10;
+var max_col = 10;
+var num_mines = Math.floor(0.1 * max_row * max_col);
+var cell2DArray = Helper.Create2DArray(max_row, max_col, 0);
+var gameOverFlag = false;
 
 window.onload = function () {
     NewGrid();
-    NewGame();
-    ShowGrid();
-    BindGrid();
-
+    document.getElementById('restart').disabled = true;
+    document.getElementById('playagain').disabled = true;
+    
+    document.getElementsByName("difficultyControl").forEach(rtn => rtn.onclick = function () {
+        num_mines = Math.floor(rtn.value * max_col * max_row);
+        console.log("Mines: " + num_mines);
+ 
+    });
+    document.getElementById('start').onclick = function () {
+        NewGrid();
+        NewGame();
+          
+        ShowGrid();
+        BindGrid();
+        document.getElementById('restart').disabled = false;
+        document.getElementById('playagain').disabled = false;
+    };
+    document.getElementById('restart').onclick = function () {
+        gameOverFlag = false;
+        document.getElementsByClassName('game-status')[0].innerHTML = "";
+        for (var i = 0; i < cell2DArray.length; i++) {
+            for (var j = 0; j < cell2DArray[i].length; j++) {
+                cell2DArray[i][j].display = false;
+            }
+        }
+        ShowGrid();
+    };
+    document.getElementById('playagain').onclick = function () {
+       
+    };
+    
 }
