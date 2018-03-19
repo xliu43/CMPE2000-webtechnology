@@ -150,6 +150,19 @@ function Check(row, col) {
     }
     if (cell2DArray[row][col].count === 0) {
         cell2DArray[row][col].display = true;
+		if(row-1>=0&&cell2DArray[row-1][col].count!=0)
+		{cell2DArray[row-1][col].display=true;}
+	    if(row+1<=cell2DArray.length-1&& cell2DArray[row+1][col].count!=0){
+		  cell2DArray[row+1][col].display=true;	
+		}
+		if(col-1>=0&& cell2DArray[row][col-1].count!=0){
+			 cell2DArray[row][col-1].display=true;
+		}
+		if(col+1<=cell2DArray[row].length-1&& cell2DArray[row][col+1].count!=0){
+			 cell2DArray[row][col+1].display=true;
+		}
+        
+		
         ShowGrid();
         Check(row - 1, col);
         Check(row + 1, col);
