@@ -5,23 +5,41 @@
     <title>lab2_MineSweeperGame</title>
     <link href="css/default.css" rel="stylesheet" />
     <script src="js/main.js"></script>
+    <style>
+        .textCenter {
+            text-align:center;
+        }
+        .game-grid {
+            min-height:500px;
+            padding-top:100px;
+        }
+        
+
+
+    </style>
 </head>
 <body>
-    <div class="header">Lab2</div>
+    <div class="header textCenter ">Lab2</div>
     <div class="game-grid"></div>
-    <div class="game-status"></div>
-    <div class="game-control">
+    <div class="game-status textCenter"></div>
+    <div class="game-control textCenter">
         <button type="button" id="start">START</button>
         <button type="button" id="restart">RESTART</button>
-        <button type="button" id="playagain">PLAY AGAIN</button>
+        <!--<button type="button" id="playagain">PLAY AGAIN</button>-->
     </div>
-    <div class="game-difficulty-control">
-        <label>Easy</label><input name="difficultyControl" type="radio" checked value="0.1"/>
-        <label>Medium</label><input name="difficultyControl" type="radio" value="0.2" />
-        <label>Hard</label><input name="difficultyControl" type="radio" value="0.5" />
+    <div class="game-difficulty-control textCenter">
+        <label>Easy</label><input name="difficultyControl" type="radio" checked value="1"/>
+        <label>Medium</label><input name="difficultyControl" type="radio" value="5" />
+        <label>Hard</label><input name="difficultyControl" type="radio" value="10" />
         
     </div>
-    <div class="footer"></div>
+    <div class="footer textCenter">
+        &copy;2017 by XiaoLiu
+        </br>
+        <script>
+            document.write('Last Modified: ' + document.lastModified);
+        </script>
+    </div>
 
 </body>
 </html>
