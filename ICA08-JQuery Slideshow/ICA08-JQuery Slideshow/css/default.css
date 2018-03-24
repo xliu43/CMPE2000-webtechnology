@@ -1,0 +1,36 @@
+﻿body {
+    background-color: aliceblue;
+}
+
+div {
+    border: 1px solid blue;
+}
+
+.header {
+    background-color: white;
+}
+
+.imageHolder {
+    height: 400px;
+    display: grid;
+    justify-content: center;
+}
+
+    .imageHolder img {
+        display: block;
+        margin: auto auto;
+    }
+
+.text-center {
+    text-align: center;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.footer {
+    background-color: white;
+}
