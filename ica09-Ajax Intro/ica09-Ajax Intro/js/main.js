@@ -1,4 +1,6 @@
 ﻿// Your code here!
+
+var array = [];
 $(document).ready(function () {
 
     $('#btn_Get').click(function () {                    //dont forget the # for id 
@@ -46,7 +48,8 @@ $(document).ready(function () {
         function successCallback(responseData, responseStatus) {
             $('#returnTable').html('');
             $('#returnTable').html(responseData);
-            console.log('success: ' + responseStatus);
+            
+            console.log( responseStatus);
             alert('functiuon called');
         }
 
@@ -54,6 +57,39 @@ $(document).ready(function () {
 
 
     });
+
+    $('#btn_showArray').click(function () {
+        array = [];
+        for (var i = 0; i < 20; i++) {
+            array.push(Math.floor((Math.random() * 10) ));
+        }
+        console.log('array length:' + array.length);
+        $('#showArray').html(array.toString());
+        
+    });
+
+    $('#btn_showmodifiedArray').click(function () {
+        var data = {};
+        data['Numbers'] = array;
+        var url = "https://thor.net.nait.ca/~demo/cmpe2000/ica_Numbers.php";
+
+        function errorHandler(ajaxReq, textStatus, errorThrown) {
+            alert('fail : ' + textStatus + " : " + errorThrown);
+        }
+
+        function successCallback(responseData, responseStatus) {
+            $('#showModifiedArray').html('');
+            $('#showModifiedArray').html(responseData);
+            console.log('success: ' + responseStatus);
+            alert(responseStatus);
+        }
+
+        AjaxRequest(url, 'POST', data, 'html', successCallback, errorHandler);
+
+    });
+
+
+
 
 });
 
