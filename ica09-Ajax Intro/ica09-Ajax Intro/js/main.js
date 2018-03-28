@@ -88,6 +88,26 @@ $(document).ready(function () {
 
     });
 
+    $('#btn_showmodifiedArrayError').click(function () {
+        var data = {};
+        data['something'] = array;
+        var url = "https://thor.net.nait.ca/~demo/cmpe2000/ica_Numbers.ph";
+
+        function errorHandler(ajaxReq, textStatus, errorThrown) {
+            alert('fail : ' + textStatus + " : " + errorThrown);
+        }
+
+        function successCallback(responseData, responseStatus) {
+            $('#showModifiedArray').html('');
+            $('#showModifiedArray').html(responseData);
+            console.log('success: ' + responseStatus);
+            alert(responseStatus);
+        }
+
+        AjaxRequest(url, 'POST', data, 'html', successCallback, errorHandler);
+
+    });
+
 
 
 

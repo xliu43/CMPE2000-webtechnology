@@ -8,6 +8,7 @@
     <script src="js/main.js"></script>
 </head>
 <body>
+    <div class="header"><h1>ICA09-Ajax Intro</h1></div>
     <div class="grid-two" id="hobby-container">
         <div>Name:</div>
         <div><input type="text" id="nameInput" /></div>
@@ -15,26 +16,32 @@
         <div><input type="text" id="hobbyInput" /></div>
         <div>How Much I like it:</div>
         <div><input id="howMuchInput" type="range" min="1" max="13" defaultValue="8" /></div>
-        <div class="grid-one"><input  type="button" value="Call with Get" id="btn_Get" /></div>
+        <div class="grid-one"><input type="button" value="Call with Get" id="btn_Get" /></div>
         <div class="grid-one"><label id="returnData"></label></div>
 
 
     </div>
     <!--questions #2-->
     <dv class="grid-two" id="table-container">
-        <div><label>Row Count:</label><input class="range-selector"type="range" min="1" max="13" defaultValue="5" /></div>
-        <div><label>Column Count:</label><input class="range-selector"type="range" min="1" max="13" defaultValue="5" /></div>
-        <div class="grid-one"><input id="btn_Table"type="button" value="Post to Make 5*5 table"/></div>
+        <div><label>Row Count:</label><input class="range-selector" type="range" min="1" max="13" defaultValue="5" /></div>
+        <div><label>Column Count:</label><input class="range-selector" type="range" min="1" max="13" defaultValue="5" /></div>
+        <div class="grid-one"><input id="btn_Table" type="button" value="Post to Make 5*5 table" /></div>
         <div class="grid-one flex-center" id="returnTable"></div>
     </dv>
 
     <!--questions #3-->
     <div id="array-container">
-        <div><input id="btn_showArray"type="button" value="Generate Numbers and Show"/></div>
+        <div><input id="btn_showArray" type="button" value="Generate Numbers and Show" /></div>
         <div id="showArray"></div>
-        <div><input id="btn_showmodifiedArray"type="button" value="Post and Show Modified"/></div>
+        <div><input id="btn_showmodifiedArray" type="button" value="Post and Show Modified" /></div>
+        <div><input id="btn_showmodifiedArrayError" type="button" value="Post and Show Modified Error" /></div>
         <div id="showModifiedArray"></div>
 
+    </div>
+
+    <div class="footer">
+        &copy;2018<br />
+        <script>document.write('Last Modified:' + document.lastModified);</script>
     </div>
 
 </body>
