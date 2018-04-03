@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ICA10-Ajax Call</title>
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="header"><h1>ICA10-Ajax Call</h1></div>
+    <div class="control-container">
+        <div id="manufacturer">
+            <label>Manufacturer</label>
+            <select id="sel_Manufacturer">
+                <!--Honda, Toyota, BMW, Suzuki, Yamaha-->
+
+            </select>
+        </div>
+
+        <div id="year">
+            <label>Year:</label>
+            <select id="sel_Year"></select>
+        </div>
+
+        <div id="type">
+            <label>Type:</label>
+            <select id="sel_Type"></select>
+        </div>
+
+        <div>
+            <input id="btn_InvokeRequest"type="button" value="Invoke Request"/>
+        </div>
+
+
+    </div>
+
+    <div id="div_Status">
+
+    </div>
+
+    <div id="div_Output">
+
+    </div>
+
+    <div class="footer">
+        &copy;2018<br />
+        <script>document.write('Last Modified:' + document.lastModified);</script>
+    </div>
+</body>
+</html>
