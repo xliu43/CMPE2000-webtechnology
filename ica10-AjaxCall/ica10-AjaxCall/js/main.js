@@ -61,10 +61,27 @@ function PopulateModels(responseData, responseStatus) {
 
     $('#div_Status').html('');
     $('#div_Status').html(responseStatus + '<br>' + count + '<br>' + message + '<br>' + searchCriteria);
-
+    $('#div_Output').empty();
     //Process resultsArray 
     for (var i = 0; i < resultsArray.length; i++) {
-        $('div_Ouput').append('<div></div>')
+        //generate radio button and label elements
+        var label = document.createElement('label');
+        var input = document.createElement('input');
+
+        //create radio buttons with label holding the model name
+        input.type = 'radio'; //Create radio button;
+        input.value = resultsArray[i]['Model_ID'];
+        input.name = 'cartype';
+
+        //Append radio button to child which is label
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(resultsArray[i]['Model_Name']));
+
+        //put into div
+      
+        $('#div_Output').append(label);
+
+
     }
 
 }
