@@ -5,3 +5,11 @@
 
 }
 
+.text-align {
+ 
+  text-align:center;
+}
+
+div {
+  border: 1px solid blue; 
+}
