@@ -73,8 +73,8 @@ function ProcessGetAll() {
     alert('Processing');
     var url = "https://thor.net.nait.ca/~demo/cmpe2000/lab03_webservice.php";
     var type = 'POST';
-    var dataType = 'JSON';
-    var data = { "tagID": "all" };
+    var dataType = 'json';
+    var data = { "tagId": "all" };
     var successFunction = ShowAllTags;
     var errorFunction = ErrorCall;
     AjaxRequest(url, type, data, dataType, successFunction, errorFunction);
