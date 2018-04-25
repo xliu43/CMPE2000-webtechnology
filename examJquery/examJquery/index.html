@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Exam 03 - jQuery</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+
+        body, input, button, select, option, span, label {
+            font-family: Inconsolata, monospace;
+            font-size: large;
+        }
+
+        .footer, .header {
+            font-family: Raleway;
+            text-align: center;
+        }
+
+        input {
+            border: 1px solid violet;
+        }
+
+            input[type=text] {
+                border: 2px groove violet;
+            }
+
+            input[type=range] {
+                border: 2px groove violet;
+                width: 100px;
+                height: 20px;
+            }
+
+        img {
+            border: 1px solid green;
+            width: 200px;
+            height: 200px;
+        }
+
+        span {
+            width: 200px;
+            display: inline-block;
+            background-color: #0f0;
+        }
+
+        label {
+            border: 1px solid blue;
+            padding: 0px 40px;
+            font-weight: bold;
+        }
+
+        div.question {
+            border: 2px solid green;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"><h1>cmpe2000 - Lab Exam 03 - Xiao</h1></div>
+    <!-- Start of Part A -->
+    <div class="question">
+        A:<br />
+        <button id="btnPartA">Part A</button>
+        <div id="divPartA">A</div>
+    </div>
+    <!-- Start of Part B -->
+    <div class="question">
+        B:
+        <div class="">
+            ( <input type="range" value="5" min="1" max="9" id="rOperand1"> +
+            <input type="range" value="5" min="1" max="9" id="rOperand2"> ) /
+            <input type="range" value="5" min="1" max="9" id="rOperand3"> =
+            <button id="btnPartB">Part B</button>
+        </div>
+        <div class="">
+            Format : ( Op1 + Op2 ) / Op3 = #.NN &nbsp;&nbsp; Output :
+            <label id="lblPartBOutput">?</label>
+        </div>
+    </div>
+    <!-- Start of Part C -->
+    <div class="question">
+        C:
+        <div class="">
+            <button id="btnPartC" type="button">Start</button>
+            <img class="partC" id="partC_0" alt="0" src="images/tux0.png">
+            <img class="partC" id="partC_1" alt="1" src="images/tux1.png">
+            <img class="partC" id="partC_2" alt="2" src="images/tux2.png">
+            <img class="partC" id="partC_3" alt="3" src="images/tux3.png">
+            <img class="partC" id="partC_4" alt="4" src="images/tux4.png">
+            <img class="partC" id="partC_5" alt="5" src="images/tux5.png">
+        </div>
+    </div>
+    <!-- Start of Part D -->
+    <div class="question">
+        D:
+        <div class="">
+            <button class="lblPartD" id="btnPartD" type="button">Type</button>
+            <label id="lblPartD"class="lblPartD"> </label>
+        </div>
+    </div>
+    <!-- Start of Part E -->
+    <div class="question">
+        E:
+        <div class="">
+            <div class=""><img id="imgPartE" src=" "></div>
+            <div class="">
+                <label><input type="radio" name="rbPartE" value="images/tux0.png" />tux0</label>
+                <label><input type="radio" name="rbPartE" value="images/tux1.png" />tux1</label>
+                <label><input type="radio" name="rbPartE" value="images/tux2.png" />tux2</label>
+            </div>
+        </div>
+    </div>
+    <!-- Start of Part F -->
+    <div class="question">
+        F:
+        <div class="partF">
+            <button id="btnPartF">Part F</button>
+            <span id="spanPartFA">A</span>
+            <span id="spanPartFB">B</span>
+            <span id="spanPartFC">C</span>
+            <span id="spanPartFD">D</span>
+        </div>
+    </div>
+    <!-- Start of Part G -->
+    <div class="question">
+        G:<br />
+        <label class="HopOnPop" id="idHop">--Hop--</label>
+        <label class="HopOnPop" id="idOn">--On--</label>
+        <label class="HopOnPop" id="idPop">--Pop--</label>
+    </div>
+    <div class="footer">
+        &copy; CNT &#9835;
+    </div>
+</body>
+</html>
