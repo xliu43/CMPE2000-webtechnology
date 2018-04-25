@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab3_Ajax</title>
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  <!--/must put before js/main.js-->
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+    <div class="header text-align"><h1>Lab3</h1></div>
+    <div id="ParentContainer">
+        <!-- Parent Container for content-->
+
+        <div id="InputContainer">
+            <!-- Div for form layout-->
+            <div class="Text_Right">
+                Tag Name:
+            </div>
+            <div>
+                <input id="TagNameInput" class="Full_Width" type="text">
+            </div>
+            <div class="Text_Right">
+                Minimum:
+            </div>
+            <div>
+                <input id="MinimumInput" Class="Full_Width" type="text">
+            </div>
+            <div class="Text_Right">
+                Maximum:
+            </div>
+            <div>
+                <input id="MaximumInput" class="Full_Width" type="text">
+            </div>
+            <div class="Full_Width">
+                <button id="btnAddTag" class="Full_Width">Add Tag</button>
+            </div>
+
+            <div class="Full_Width">
+                <button id="btnGetAll" class="Full_Width">Get All</button>
+            </div>
+            <div class="Text_Right">
+                Tag By Filter:
+            </div>
+            <div>
+                <input id="FilterInput" class="Full_Width" type="text">
+            </div>
+            <div class="Full_Width">
+                <button id="btnFilter" class="Full_Width">Filter</button>
+            </div>
+            <div>
+                <select id="DropDown" class="Full_Width">
+                    <!-- Drop down menu-->
+
+                </select>
+            </div>
+            <div>
+                <button id="btnGetHistory" class="Full_Width"> Get Historical </button>
+            </div>
+            <div class="Full_Width">
+                <button id="btnGetLive" class="Full_Width"> Get Live </button>
+            </div>
+            <div class="Text_Right">
+                Live:
+            </div>
+            <div>
+                <input type="checkbox">
+            </div>
+            <div id="Status">
+
+            </div>
+
+            <div id="divTable" class="Full_Width">
+                <!-- Output -->
+                <table>
+                    <thead id="TableHead">
+                        <tr>
+                            <th>ID</th>
+                            <th>Tag</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Value</th>
+                            <th>Bar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="outputTable"></tbody>
+                </table>
+
+
+
+
+            </div>
+            <div class="footer text-align">
+                &copy;2018<br />
+                <script>document.write('Last Modified:' + document.lastModified);</script>
+            </div>
+
+</body>
+</html>
