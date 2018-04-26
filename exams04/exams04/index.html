@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Exam 04</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <style type="text/css">
+
+        body, input, button, select, option, span, label {
+            font-family: Inconsolata, monospace;
+            font-size: large;
+        }
+
+        .footer, .header {
+            font-family: Raleway;
+            text-align: center;
+        }
+
+        div {
+            background-color: #ffd;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 3px;
+        }
+
+        .wide {
+            width: 100%;
+        }
+
+        .AnswerClass {
+            border: 2px groove #0f0;
+        }
+
+        .eClass td, th {
+            border: solid 2px #00f;
+            padding: 2px 20px;
+        }
+
+        input[type=text] {
+            border: 2px groove violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"><h1>cmpe2000 - Lab Exam 04 - [Your Name Here]</h1></div>
+    <!-- Start of Part A -->
+    <div class="">
+        A:<br />
+        <button id="btnPartA">Part A</button><label id="lblPartA">?</label>
+    </div>
+    <div class="">
+        B:
+        <div class="">
+            <input size="4" maxlength="4" readonly type="text" id="tbPartB_A" />
+            <input size="4" maxlength="4" readonly type="text" id="tbPartB_B" />
+            <input size="4" maxlength="4" readonly type="text" id="tbPartB_C" />
+            Sum = <label id="lblPartB">?</label>
+            <button id="btnPartB" class="wide">Part B</button>
+        </div>
+    </div>
+    <div class="">
+        C:<br />
+        Seed : <input type="text" id="tbPartC" size="4">
+        <button id="btnPartC" type="button">Part C</button><hr />
+        <div class="AnswerClass" id="divPartC">&nbsp;</div>
+    </div>
+    <div class="">
+        D:
+        X<sup>Y</sup> : <input type="text" id="tbPartDX" size="4"><sup><input type="text" id="tbPartDY" size="4"></sup>
+        = <input type="text" name="tbPartDAnswer" id="inputAnswer"size="24"><br />
+        <button id="btnPartD" type="button">Part D</button><br />
+        <div class="AnswerClass" id="divPartDMessage">&nbsp;</div>
+    </div>
+    <div class="">
+        E:
+        Seed: <input size="3" maxlength="2" type="text" id="tbPartESeed" />
+        Num:<input size="3" maxlength="2" type="text" id="tbPartENum" />
+        <button id="btnPartE">Part E</button>
+        <div class="AnswerClass" id="divPartE"> </div>
+        <div class="AnswerClass">
+            <table id="tblPartE" class="eClass">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2017 - Have a great break... keep coding
+    </div>
+</body>
+</html>
